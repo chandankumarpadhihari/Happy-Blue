@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Blue — Deals worth clicking</title>
+<meta name="description" content="Happy Blue curates the best deals on Amazon — picture, price, and the full story before you buy.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TOP DISCLOSURE BAR ============ -->
+<div class="disclosure-bar">
+  As an Amazon Associate, Happy Blue earns from qualifying purchases.
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <circle cx="15" cy="15" r="14" fill="#2F6FED"/>
+          <path d="M9 15.5L13 19.5L21 10.5" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Happy Blue
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#deals">Deals</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="header-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search deals…" aria-label="Search products">
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Curated Amazon finds, picked by hand</p>
+        <h1>Good stuff.<br>Fair prices.<br><span class="hero-accent">Happy&nbsp;clicks.</span></h1>
+        <p class="hero-sub">
+          Every product on Happy Blue is checked, priced, and photographed
+          before it earns a spot here — so you can scroll, compare, and buy
+          in one confident tap.
+        </p>
+        <div class="hero-actions">
+          <a href="#deals" class="btn btn-primary">Browse today's deals</a>
+          <a href="#categories" class="btn btn-ghost">Shop by category</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="statCount">12</strong><span>handpicked deals</span></div>
+          <div><strong>4.4★</strong><span>avg. rating</span></div>
+          <div><strong>6</strong><span>categories</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="tag-card tag-card--1">
+          <span class="tag-badge">Deal of the Day</span>
+          <div class="tag-price">₹699<small>₹1,199</small></div>
+          <div class="tag-name">Insulated Bottle</div>
+        </div>
+        <div class="tag-card tag-card--2">
+          <span class="tag-badge">Best Seller</span>
+          <div class="tag-price">₹4,499<small>₹6,999</small></div>
+          <div class="tag-name">ANC Headphones</div>
+        </div>
+        <div class="tag-card tag-card--3">
+          <span class="tag-badge">New</span>
+          <div class="tag-price">₹1,299<small>₹2,199</small></div>
+          <div class="tag-name">BT Speaker</div>
+        </div>
+        <div class="hero-blob"></div>
+      </div>
+    </div>
+
+    <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,80 L0,80 Z" fill="#F7FAFF"/>
+    </svg>
+  </section>
+
+  <!-- ============ CATEGORY CHIPS + SORT ============ -->
+  <section class="filter-bar" id="categories">
+    <div class="filter-inner">
+      <div class="chip-row" id="chipRow"></div>
+      <div class="sort-wrap">
+        <label for="sortSelect">Sort</label>
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Rating</option>
+          <option value="discount">Biggest Discount</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <section class="deals" id="deals">
+    <div class="deals-inner">
+      <div class="deals-heading">
+        <h2>Today's deals</h2>
+        <p id="resultsCount">12 products</p>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <p>No deals match that search.</p>
+        <button class="btn btn-ghost" id="clearFilters">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / DISCLOSURE ============ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2>Why Happy Blue?</h2>
+      <p>
+        We're not a marketplace — we're a shortlist. Happy Blue is run by a
+        small team that actually reads the specs, compares prices, and only
+        posts a product once it clears the bar. Every purchase you make
+        through our links sends you straight to Amazon to check out securely;
+        we simply earn a small commission at no extra cost to you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <h2>Get the best deals in your inbox</h2>
+      <p>One short email a week. No spam, just genuinely good prices.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@example.com" aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Notify me</button>
+      </form>
+      <p class="newsletter-note" id="newsletterNote" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 30 30" fill="none">
+          <circle cx="15" cy="15" r="14" fill="#2F6FED"/>
+          <path d="M9 15.5L13 19.5L21 10.5" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Happy Blue
+    </div>
+    <p class="footer-disclosure">
+      Happy Blue is a participant in the Amazon Associates Program, an
+      affiliate advertising program. As an Amazon Associate, we earn from
+      qualifying purchases. Prices and availability are accurate as of the
+      date shown and are subject to change on Amazon.
+    </p>
+    <p class="footer-copy">© <span id="year"></span> Happy Blue. All product images belong to their respective owners.</p>
+  </div>
+</footer>
+
+<!-- ============ QUICK VIEW MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modalBody"><!-- injected --></div>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
