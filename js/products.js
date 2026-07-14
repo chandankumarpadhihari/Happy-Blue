@@ -26,11 +26,6 @@
 const CATEGORIES = [
   "All",
   "Electronics",
-  "Home & Kitchen",
-  "Fashion",
-  "Fitness",
-  "Books",
-  "Beauty"
 ];
 
 const PRODUCTS = [
