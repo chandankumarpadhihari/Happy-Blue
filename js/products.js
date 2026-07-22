@@ -47,9 +47,11 @@ const PRODUCTS = [
     ],
     buyLink:
       "https://www.amazon.in/dp/B0FQ5F2QSQ?social_share=cm_sw_r_cso_cp_apin_dp_K2HFF8HA8SM4R850JEJC&th=1&linkCode=ll2&tag=happyblue050-21&linkId=49d2909c0b5d058aabc8b7b9fbbf6174&ref_=as_li_ss_tl"
-  }
+  }];
 
-   id: 2,
+  const PRODUCTS = [
+   { 
+    id: 2,
     title: "Apple iPhone 16e",
     category: "Electronics",
     image: "https://m.media-amazon.com/images/I/61FMZ9rSZUL._SL1500_.jpg",
@@ -58,8 +60,10 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 1236,
     features: [
-      "BUILT FOR APPLE INTELLIGENCE — Personal, private, powerful. Write, express yourself and get things done effortlessly. A18 CHIP. FAST INTO THE FUTURE — A18 chip empowers Apple Intelligence, gaming and iOS updates for years to come. SUPERSIZED BATTERY LIFE — Text, browse and binge movies and shows with up to 26 hours of video playback — the best battery life in a 6.1″ iPhone. CAMERAS — The 2-in-1 camera system has a 48MP Fusion camera for super-high-resolution photos and a 2x optical-quality Telephoto. Take incredible selfies with the 12MP front camera. DURABLE DESIGN. BRILLIANT DISPLAY — Stunning 15.40 cm (6.1″) Super Retina XDR display. Ceramic Shield front, tougher than any smartphone glass. DURABLE DESIGN. BRILLIANT DISPLAY — Stunning 15.40 cm (6.1″) Super Retina XDR display. Ceramic Shield front, tougher than any smartphone glass. ACTION BUTTON — Get quick, customisable access to your favourite apps and features, or use visual intelligence to learn about your surroundings. MAKE IT YOURS — With iOS 18, you can customise your Home Screen and Lock Screen, send messages with text effects, tap back with any emoji and more. PRIVACY. THAT’S IPHONE — Use Face ID to securely unlock, sign in and pay. With Private Cloud Compute, no one but you can access your data — not even Apple."  ],
+      "BUILT FOR APPLE INTELLIGENCE — Personal, private, powerful. Write, express yourself and get things done effortlessly. A18 CHIP. FAST INTO THE FUTURE — A18 chip empowers Apple Intelligence, gaming and iOS updates for years to come. SUPERSIZED BATTERY LIFE — Text, browse and binge movies and shows with up to 26 hours of video playback — the best battery life in a 6.1″ iPhone. CAMERAS — The 2-in-1 camera system has a 48MP Fusion camera for super-high-resolution photos and a 2x optical-quality Telephoto. Take incredible selfies with the 12MP front camera. DURABLE DESIGN. BRILLIANT DISPLAY — Stunning 15.40 cm (6.1″) Super Retina XDR display. Ceramic Shield front, tougher than any smartphone glass. DURABLE DESIGN. BRILLIANT DISPLAY — Stunning 15.40 cm (6.1″) Super Retina XDR display. Ceramic Shield front, tougher than any smartphone glass. ACTION BUTTON — Get quick, customisable access to your favourite apps and features, or use visual intelligence to learn about your surroundings. MAKE IT YOURS — With iOS 18, you can customise your Home Screen and Lock Screen, send messages with text effects, tap back with any emoji and more. PRIVACY. THAT’S IPHONE — Use Face ID to securely unlock, sign in and pay. With Private Cloud Compute, no one but you can access your data — not even Apple." 
+    ],
     buyLink:
-      "https://link.amazon/B0bkRwFFS"}
+      "https://link.amazon/B0bkRwFFS"
+   }
 
 ];
